@@ -1,7 +1,8 @@
 {
   "root": true,
   "project": {
-    "name": "oldlace-viper"
+    "name": "oldlace-viper",
+    "basePath": "/studio"
   },
   "api": {
     "projectId": "xza9zosd",
