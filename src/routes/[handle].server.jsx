@@ -8,6 +8,9 @@ export default function Index(props) {
     const request = await client.fetch(`*[_type == 'pet']`);
     return await request;
   });
+
+  console.log(data);
+  
   console.log(props.params.handle);
   const actualPet = data.some( pet => pet?.name?.toLowerCase() == props?.params?.handle);
 
