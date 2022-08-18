@@ -13,7 +13,9 @@
     "@sanity/default-login",
     "@sanity/desk-tool",
     "asset-source-unsplash",
-    "media"
+    "media",
+    "@sanity/dashboard",
+    "dashboard-widget-netlify"
   ],
   "env": {
     "development": {
@@ -23,6 +25,10 @@
     }
   },
   "parts": [
+    {
+      "implements": "part:@sanity/dashboard/config",
+      "path": "src/dashboardConfig.js"
+    },
     {
       "name": "part:@sanity/base/schema",
       "path": "./schemas/schema"

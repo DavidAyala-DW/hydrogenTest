@@ -7,6 +7,8 @@
   "scripts": {
     "dev": "shopify hydrogen dev",
     "build": "shopify hydrogen build",
+    "sanity": "cd oldlace-viper && npm run build",
+    "buildLocal": "npm-run-all --parallel build sanity",
     "preview": "shopify hydrogen preview",
     "test": "WATCH=true vitest",
     "test:ci": "yarn build -t node && vitest run"
@@ -35,6 +37,7 @@
     "@shopify/hydrogen": "^1.2.0",
     "clsx": "^1.1.1",
     "graphql-tag": "^2.12.6",
+    "npm-run-all": "^4.1.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-use": "^17.4.0",
